@@ -1,0 +1,106 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+body{
+  background:black;
+  /* color:white; */
+}
+.App {
+  text-align: center;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #61dafb;
+  backdrop-filter: blur(9px);
+  padding:10px 60px;
+}
+.navbar{
+  display: flex;
+  list-style-type: none;
+}
+.navbar li{
+  padding:5px 10px;
+  margin:0 5px;
+  border:2px solid black;
+  transition: scale .75s ease-in-out;
+  transition: transform .50s ease-in-out;
+}
+.navbar li:hover{
+  scale: .9;
+  /* transform: rotate(360deg); */
+}
+h3{
+  margin:5px 0;
+}
+.carContainer{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  padding:20px 20px;
+}
+.cars{
+  width:30%;
+  height:20vw;
+  border:2px solid black;
+  margin:20px 5px;
+  padding:5px 15px;
+  border-radius:10px;
+  background:#fff;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  flex-direction:column;
+}
+.carImg{
+  width:50%;
+  object-fit:cover;
+}
+.logo{
+  cursor:pointer;
+}
+a{
+  text-decoration:none;
+  color:black;
+}
+.routedCars{
+  width:23%;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  animation: slideIn .75s cubic-bezier(0.77, -0.17, 0.46, 2);
+  height:auto;
+  width:auto;
+}
+.routedCars img{
+  width:85%;
+}
+
+
+@keyframes slideIn{
+  0%{
+      transform: translateX(-500px);
+  }
+  100%{
+      transform: translateX(0px);
+  }
+}
+
+@media screen and (min-width:1000px) {
+  .carImg{
+    width:80%;
+  }
+  .routedCars{
+    height:35vh;
+    width:22vw;
+    padding:20px 0;
+  }
+  .routedCars img{
+    width:70%;
+    padding:10px 0 20px;
+  }
+}
